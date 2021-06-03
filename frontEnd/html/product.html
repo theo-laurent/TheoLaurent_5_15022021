@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="/frontEnd/css/style.css" />
+    <title>Orinoco - Article</title>
+  </head>
+
+  <body class="bg-secondary">
+    <div class="container-fluid bg-dark">
+      <div class="row justify-content-center">
+        <nav class="col-10 navbar navbar-expand navbar-dark">
+          <a class="navbar-brand" href="/frontEnd/index.html">Ocorino</a>
+          <span class="navbar ml-auto p-1">
+            <a class="nav-link text-light" href="/frontEnd/index.html"
+              >Accueil</a
+            >
+            <a
+              id="logoPanier"
+              class="nav-link text-light"
+              href="/frontEnd/html/panier.html"
+            ></a>
+          </span>
+        </nav>
+      </div>
+    </div>
+
+    <div class="container ">
+      <div class="row mt-5 mb-5" id="container-product">
+        <div class="col-xl-12 col-md-8 col-sm-10 m-auto">
+          <div class="card flex-xl-row">
+            <span id="img"> </span>
+            <div class="card-body">
+              <h1 class="card-title" id="nom"></h1>
+              <p class="card-text" id="description"></p>
+              <div class="card-body d-flex">
+                <h5 class="card-text m-auto">Choix de la lentille</h5>
+                <select
+                  class="form-control ml-auto"
+                  style="width: 50%"
+                  name="lentilles"
+                  id="lentilles"
+                ></select>
+              </div>
+              <div class="card-body d-flex">
+                <h5 class="card-text m-auto">Quantité</h5>
+                <select
+                  class="form-control ml-auto"
+                  style="width: 50%"
+                  name=""
+                  id="quantité"
+                >
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                </select>
+              </div>
+              <div class="card-body d-flex-column text-center">
+                <p class="mb-auto" style="font-size: 1.8rem" id="prix"></p>
+                <button type="button" class="btn btn-success" id="buttonPanier">
+                  Ajouter au panier
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="bg-dark">
+      <div class="container-fluid">
+        <div class="row align-content-center" style="height: 75px">
+          <div class="col">
+            <ul class="list-inline text-center mb-0">
+              <li class="list-inline-item pr-5">
+                <a href="" class="text-light">A propos</a>
+              </li>
+              <li class="list-inline-item pr-5">
+                <a href="" class="text-light">Contactez nous</a>
+              </li>
+              <li class="list-inline-item pr-5">
+                <a href="" class="text-light">Conditions d'utilisations</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+      integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://kit.fontawesome.com/d328c4588c.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="/frontEnd/JS/product.js"></script>
+  </body>
+</html>

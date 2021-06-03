@@ -1,0 +1,62 @@
+html {
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+}
+
+body{
+  
+}
+
+#couv {
+  width: 100%;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+}
+
+#couv h1 {
+  margin: 50px;
+  max-width: 50%;
+  background-color: #3536365d;
+  font-family: "noto serif KR";
+  font-weight: 600;
+  font-size: 3.6vmax;
+  color: whitesmoke;
+  position: absolute;
+  z-index: 2;
+}
+
+#couv img {
+  width: 100%;
+  z-index: 1;
+  height: 80%;
+  object-fit: cover;
+}
+
+#couv span {
+  height: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#couv a {
+  color: white;
+  font-size: 50px;
+}
+
+#couv a:hover {
+  transform: scale(1.2);
+}
+
+#container-main .card:hover {
+  transform: scale(1.1);
+  transition-duration: 0.7s;
+}
+
+
+@media (min-width: 750px) {
+  footer li {
+    font-size: 18px;
+  }
+}
