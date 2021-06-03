@@ -12,7 +12,7 @@ function getUrlArticle() {
 }
 
 function getOneArticle(idArticle) {
-  return fetch(`http://localhost:3000/api/cameras/${idArticle}`)
+  return fetch(`${apiUrl}/api/cameras/${idArticle}`)
     .then(function (response) {
       return response.json();
     })

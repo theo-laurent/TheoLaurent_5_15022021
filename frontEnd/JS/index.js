@@ -8,7 +8,7 @@ async function main() {
 }
 
 function getArticles() {
-  return fetch("http://localhost:3000/api/cameras/")
+  return fetch(`${apiUrl}/api/cameras`)
     .then(function (response) {
       if (response.ok) {
         return response.json();
@@ -41,12 +41,13 @@ function displayArticles(article) {
           </div>`;
 }
 
-let numberPanier
+let numberPanier;
 
-if (JSON.parse(localStorage.getItem("panier")) === null){
-  numberPanier = 0 } else {
-    numberPanier = JSON.parse(localStorage.getItem("panier")).length
-  }
+if (JSON.parse(localStorage.getItem("panier")) === null) {
+  numberPanier = 0;
+} else {
+  numberPanier = JSON.parse(localStorage.getItem("panier")).length;
+}
 
 document.getElementById("logoPanier").innerHTML +=
   `<i class="fas fa-shopping-cart" style="font-size:22px"></i>` +

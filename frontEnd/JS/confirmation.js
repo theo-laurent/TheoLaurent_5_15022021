@@ -15,6 +15,6 @@ document.getElementById("container-confirmation").innerHTML = `
         </div>
         </div> `;
 
-/*      
+        
 window.onunload(localStorage.clear())
-*/
+
