@@ -38,8 +38,8 @@
     </header>
 
     <div class="container mt-5">
+      <h3 class="pb-3">Votre commande</h3>
       <table class="table table-bordered">
-        <h2 class="pb-3">Votre commande</h2>
         <thead>
           <tr>
             <th scope="col">Article</th>
@@ -58,17 +58,23 @@
       </div>
 
       <form class="m-4 mt-5" id="formulaire">
-        <h2 class="pb-3">Passer commande</h2>
-
+        <h3 class="pb-3">Passer commande</h3>
         <div class="form-row align-items-center justify-content-center">
           <div class="form-group col-md-4 pr-md-5">
-            <label for="formName">Nom</label>
-            <input class="form-control" id="lastName" type="text" required
-            minlength="2" pattern="[a-zA-ZÀ-ÿ]*" autofocus placeholder="Dupont"
+            <label for="lastName">Nom</label>
+            <input
+              class="form-control"
+              id="lastName"
+              type="text"
+              required
+              minlength="2"
+              pattern="[a-zA-ZÀ-ÿ]*"
+              autofocus
+              placeholder="Dupont"
             />
           </div>
           <div class="form-group col-md-4">
-            <label for="formFirstname">Prénom</label>
+            <label for="firstName">Prénom</label>
             <input
               class="form-control"
               id="firstName"
@@ -80,7 +86,7 @@
             />
           </div>
           <div class="form-group col-md-8">
-            <label for="formEmail">Adresse email</label>
+            <label for="email">Adresse email</label>
             <input
               class="form-control"
               id="email"
@@ -91,7 +97,7 @@
             />
           </div>
           <div class="form-group col-md-8">
-            <label for="formAddress">Adresse</label>
+            <label for="address">Adresse</label>
             <input
               class="form-control"
               id="address"
@@ -101,7 +107,7 @@
             />
           </div>
           <div class="form-group col-md-5 pr-md-5">
-            <label for="formCity">Ville </label>
+            <label for="city">Ville </label>
             <input
               class="form-control"
               id="city"
@@ -128,7 +134,10 @@
 
     <footer class="bg-dark">
       <div class="container">
-        <div class="row align-content-center" style="height: 75px">
+        <div
+          class="row align-content-center justify-content-center"
+          style="height: 75px"
+        >
           <div class="col">
             <ul class="list-inline text-center mb-0">
               <li class="list-inline-item pr-5">

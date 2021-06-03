@@ -3,8 +3,7 @@ html {
   scroll-behavior: smooth;
 }
 
-body{
-  
+body {
 }
 
 #couv {
@@ -53,7 +52,6 @@ body{
   transform: scale(1.1);
   transition-duration: 0.7s;
 }
-
 
 @media (min-width: 750px) {
   footer li {

@@ -16,26 +16,26 @@ function getOneArticle(idArticle) {
     .then(function (response) {
       return response.json();
     })
-    .then(function (data) {
-      return data;
-    })
     .catch(function (error) {
       alert("Une erreur provenant du serveur est survenue.");
     });
 }
 
 function displayOneArticle(product) {
-  document.getElementById("img").innerHTML = `<img src="${product.imageUrl}" class="card-img"/>`
+  document.getElementById(
+    "img"
+  ).innerHTML = `<img src="${product.imageUrl}" class="card-img"/>`;
   document.getElementById("nom").innerHTML = `${product.name}`;
   document.getElementById("description").innerHTML = `${product.description}`;
-  document.getElementById("prix").innerHTML = `${product.price/100}.00€`;
+  document.getElementById("prix").innerHTML = `${product.price / 100}.00€`;
 
   for (i of product.lenses) {
     document.getElementById("lentilles").innerHTML += `<option>${i}</option>`;
   }
 }
 
-let quantité = document.getElementById("quantité")
+let quantité = document.getElementById("quantité");
+console.log(quantité.value);
 
 function clickPanier(product) {
   document.getElementById("buttonPanier").onclick = function (event) {
@@ -49,13 +49,12 @@ function clickPanier(product) {
       quantité: quantité.value,
       id: product._id,
     });
-
     localStorage.setItem("panier", JSON.stringify(dataPanier));
     alert("Votre article a bien été ajouté au panier.");
     window.location.reload();
   };
-  console.log(localStorage);
 }
+
 
 let numberPanier;
 
@@ -71,4 +70,3 @@ document.getElementById("logoPanier").innerHTML +=
   "&nbsp" +
   "&nbsp" +
   `<span style="font-size:20px">${numberPanier}</span>`;
-

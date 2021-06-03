@@ -1,5 +1,6 @@
 let panierFinal = JSON.parse(localStorage.getItem("panier"));
 let totalComplet = 0;
+let nbrArticles = 0;
 
 console.log(panierFinal);
 
@@ -16,6 +17,7 @@ function displayPanier() {
     <td style="width:10px"><button type="button" class="btn btn-danger btnDelete">Supprimer</button></td>
       </tr>`;
       totalComplet += (i.prix / 100) * i.quantité;
+      nbrArticles += Number(i.quantité);
     }
     document.getElementById("tableauPanier").innerHTML += ` <tr>
             <td colspan="3">Total</td>
@@ -58,18 +60,26 @@ function formulaireContactValid() {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({ contact, products }),
-      }).then(function (res) {
-        if (res.ok) {
+      })
+        .then(function (res) {
+          if (res.ok) {
+            return res.json();
+          } else {
+            alert("Le serveur n'a pas reçu les données");
+          }
+        })
+        .then(function (data) {
           alert("Les données ont bien été transmises au serveur");
-          res.json;
-        } else {
-          alert("Le serveur n'a pas reçu les données");
-        }
-      });
+          localStorage.setItem(
+            "identifiantCommande",
+            JSON.stringify(data.orderId)
+          );
+          localStorage.setItem("paiement", totalComplet);
+          localStorage.setItem("nbrArticles", nbrArticles);
+          window.location.assign("./confirmation.html");
+        });
     } else {
       alert("Veuillez remplir le formulaire correctement");
     }
   });
 }
-
-console.log(localStorage);
