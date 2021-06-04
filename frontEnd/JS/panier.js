@@ -53,7 +53,7 @@ function formulaireContactValid() {
       products.push(i.id);
     }
     if (formulaire.checkValidity()) {
-      fetch(`${apiUrl}/api/cameras/order`, {
+      fetch(`http://localhost:3000/api/cameras/order`, {
         method: "POST",
         headers: {
           Accept: "application/json",
