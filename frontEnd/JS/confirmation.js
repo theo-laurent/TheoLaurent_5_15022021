@@ -1,5 +1,6 @@
 console.log(localStorage);
 
+//
 document.getElementById("container-confirmation").innerHTML = `
         <div class="card" id="cardConfirmation">
         <div class="card-body">
@@ -15,6 +16,8 @@ document.getElementById("container-confirmation").innerHTML = `
         </div>
         </div> `;
 
-        
-window.onunload(localStorage.clear())
+// on ajoute un evenement à window qui lors du déchargement de la page videra le localStorage.
+window.addEventListener("unload", function event(){
+  localStorage.clear()
+})
 
