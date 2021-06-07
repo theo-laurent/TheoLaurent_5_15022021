@@ -20,9 +20,7 @@ function displayPanier() {
     <td>${i.nom}</td>
     <td>${i.quantité}</td>
     <td>${i.prix / 100}.00 €</td>
-    <td>${(i.prix / 100) * i.quantité}.00 €</td>
-    <td style="width:10px"><button type="button" class="btn btn-danger btnDelete">Supprimer</button></td>
-      </tr>`;
+    <td>${(i.prix / 100) * i.quantité}.00 €</td>`
       totalComplet += (i.prix / 100) * i.quantité;
       nbrArticles = Number(i.quantité);
     }
