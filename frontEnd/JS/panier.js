@@ -20,7 +20,7 @@ function displayPanier() {
     <td>${i.nom}</td>
     <td>${i.quantité}</td>
     <td>${i.prix / 100}.00 €</td>
-    <td>${(i.prix / 100) * i.quantité}.00 €</td>`
+    <td>${(i.prix / 100) * i.quantité}.00 €</td>`;
       totalComplet += (i.prix / 100) * i.quantité;
       nbrArticles = Number(i.quantité);
     }
@@ -83,7 +83,7 @@ function formulaireContactValid() {
           localStorage.setItem("paiement", totalComplet);
           localStorage.setItem("nbrArticles", nbrArticles);
           // on redirige l'utilisateur vers la page confirmation.html lors de la fin de la fonction
-          window.location.assign("./confirmation.html");
+          window.location.href = "./confirmation.html";
         });
     } else {
       alert("Veuillez remplir le formulaire correctement");
