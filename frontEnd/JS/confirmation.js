@@ -14,7 +14,7 @@ function confirmationCommande() {
           localStorage.nbrArticles
         }</p>
 <p></strong> Paiement total: <strong>${localStorage.paiement} €</strong></p>
-        <a class="btn btn-info ml-auto" href="/frontEnd/index.html">Retour à l'accueil</a>
+        <a class="btn btn-info ml-auto" href="./index.html">Retour à l'accueil</a>
         </div>
         </div> `;
 
