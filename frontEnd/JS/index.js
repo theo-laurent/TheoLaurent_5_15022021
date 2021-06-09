@@ -2,10 +2,10 @@ main();
 
 // fonction main qui regroupe les fonctions principales de la page JS, la fonction boucle sur l'array "articles" pour appliquer displayArticle sur chaque "article"
 async function main() {
-  const articles = await getArticles();
-  for (let article of articles) {
+  for (let article of await getArticles()) {
     displayArticles(article);
   }
+  logoPanier();
 }
 
 // la fonction get récupère une réponse de l'API et la parse grâce à response.json() pour retourner un array
@@ -28,7 +28,7 @@ function displayArticles(article) {
   document.getElementById("container-main").innerHTML += `
   
     <div class="col-md-6 col-lg-4 mb-5 w-100">
-            <div class="card h-100">
+            <div class="card h-100 card-index">
             <img class="card-img-top" src="${article.imageUrl}">
               <div class="card-body">
                 <h2 class="card-title">${article.name}</h2>
@@ -44,20 +44,19 @@ function displayArticles(article) {
           </div>`;
 }
 
-// création d'une variable pour quantifier le panier
-let numberPanier;
-
-// si "panier" de localstorage est null, on lui attribue la valeur de 0, sinon on lui attribue le length de celui ci.
-if (JSON.parse(localStorage.getItem("panier")) === null) {
-  numberPanier = 0;
-} else {
-  numberPanier = JSON.parse(localStorage.getItem("panier")).length;
+function logoPanier() {
+  let numberPanier;
+  // si "panier" de localstorage est null, on lui attribue la valeur de 0, sinon on lui attribue le length de celui ci.
+  if (JSON.parse(localStorage.getItem("panier")) === null) {
+    numberPanier = 0;
+  } else {
+    numberPanier = JSON.parse(localStorage.getItem("panier")).length;
+  }
+  // création d'un logo panier prenant notre variable numberPanier pour visuellement quantifier le panier sur les pages html.
+  document.getElementById("logoPanier").innerHTML +=
+    `<i class="fas fa-shopping-cart" style="font-size:22px"></i>` +
+    "&nbsp" +
+    "&nbsp" +
+    "&nbsp" +
+    `<span style="font-size:20px">${numberPanier}</span>`;
 }
-
-// création d'un logo panier prenant notre variable numberPanier pour visuellement quantifier le panier sur les pages html.
-document.getElementById("logoPanier").innerHTML +=
-  `<i class="fas fa-shopping-cart" style="font-size:22px"></i>` +
-  "&nbsp" +
-  "&nbsp" +
-  "&nbsp" +
-  `<span style="font-size:20px">${numberPanier}</span>`;

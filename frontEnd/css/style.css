@@ -3,7 +3,12 @@ html {
   scroll-behavior: smooth;
 }
 
-body {
+.card-index {
+  border-radius: 50px;
+}
+
+.card-index img {
+  border-radius: 50px 50px 0 0;
 }
 
 #couv {
