@@ -2,7 +2,7 @@ main();
 
 // fonction main qui regroupe les fonctions principales de la page JS, la fonction boucle sur l'array "articles" pour appliquer displayArticle sur chaque "article"
 async function main() {
-  for (let article of await getArticles()) {
+  for (const article of await getArticles()) {
     displayArticles(article);
   }
   logoPanier();

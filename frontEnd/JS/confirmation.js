@@ -2,6 +2,7 @@ console.log(localStorage);
 
 confirmationCommande();
 
+//
 function confirmationCommande() {
   document.getElementById("container-confirmation").innerHTML = `
         <div class="card" id="cardConfirmation">
