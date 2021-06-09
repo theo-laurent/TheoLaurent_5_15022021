@@ -35,7 +35,7 @@ function displayArticles(article) {
                 <p class="card-text">${article.description}</p>
                 <div class="card-body">
                 <p><strong>${article.price / 100}.00</strong> €</p>
-                <a href="./html/product.html?id=${
+                <a href="./product.html?id=${
                   article._id
                 }" class="stretched-link"></a>
                 </div>
